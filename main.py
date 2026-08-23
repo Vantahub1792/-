@@ -2494,17 +2494,6 @@ def generate_landing_page(link: dict, uid: str, addresses: list[str]) -> str:
 @media(max-width:760px){{.container{{max-width:620px!important;padding:20px 12px 42px!important}}.sub-hero-head{{align-items:flex-start;flex-direction:column}}.sub-hero-grid{{grid-template-columns:1fr}}.sub-hero-grid .ring-card{{min-height:300px}}.sub-actions-card{{grid-template-columns:1fr!important}}.sub-actions-card .sub-action-grid{{display:grid!important;grid-template-columns:1fr 1fr!important}}.sub-action-btn,.sub-action-btn.primary{{min-width:0!important;width:100%!important}}.platform-chips{{grid-template-columns:repeat(2,1fr)!important}}.apps-grid{{grid-template-columns:repeat(2,1fr)!important}}}}
 @media(max-width:460px){{.sub-brandline .header-title{{font-size:22px!important}}.sub-actions-card .sub-action-grid{{grid-template-columns:1fr!important}}.overview-line{{align-items:flex-start;flex-direction:column;gap:4px}}.overview-line b{{text-align:left}}.hero-chip{{align-self:stretch;text-align:center}}}}
 </style>
-
-<style>
-/* VANTA TOTAL UI REBUILD */
-body{background:#050008!important}
-.vanta-new-login{background:linear-gradient(135deg,#050008,#1a0730);border-radius:32px;box-shadow:0 0 60px #7c3aed55;padding:50px}
-.dashboard-new{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.vanta-widget{background:linear-gradient(145deg,#160525,#07010d);border:1px solid #7c3aed55;border-radius:28px;padding:30px;transition:.3s}
-.vanta-widget:hover{transform:translateY(-8px);border-color:#c084fc}
-.vanta-title{font-size:44px;font-weight:900;letter-spacing:-2px}
-.vanta-glow{color:#fff;text-shadow:0 0 25px #a855f7}
-</style>
 </head>
 <body>
 <div class="bg-glow"></div>
@@ -2518,8 +2507,9 @@ body{background:#050008!important}
     <!-- New subscription hero -->
     <div class="sub-hero-head">
         <div>
-            <div class="sub-eyebrow"><span class="sub-live-dot"></span> VANTA</div>
-            <div class="header-sub">VANTA · {link['label']} · private access portal</div>
+            <div class="sub-eyebrow"><span class="sub-live-dot"></span> SECURE SUBSCRIPTION</div>
+            <div class="sub-brandline"><span class="brand-mark" aria-hidden="true">VANTA</span><span class="header-title">VANTA</span></div>
+            <div class="header-sub">{link['label']} · private access portal</div>
         </div>
         <div class="hero-chip">{status_text}</div>
     </div>
@@ -4075,28 +4065,6 @@ body[dir="rtl"] .sidebar{left:auto!important;right:0!important}body[dir="rtl"] .
 @media(max-width:760px){.sidebar{left:0!important;right:0!important;top:auto!important;bottom:0!important;width:100%!important;height:78px!important;min-height:78px!important;padding:7px 8px!important;display:flex!important;flex-direction:row!important;align-items:stretch!important;gap:5px!important;border-right:0!important;border-top:1px solid rgba(168,85,247,.24)!important;background:rgba(11,4,20,.97)!important;box-shadow:0 -14px 34px rgba(0,0,0,.40)!important}.sidebar::before{left:0!important;right:0!important;top:0!important;bottom:auto!important;width:auto!important;height:2px!important}.sb-brand{display:none!important}.sb-nav{flex:1!important;display:flex!important;flex-direction:row!important;align-items:stretch!important;justify-content:space-around!important;gap:4px!important;padding:0!important;overflow:visible!important}.nav-item{height:64px!important;min-width:0!important;flex:1!important;padding:7px 4px!important;border-radius:12px!important;flex-direction:column!important;justify-content:center!important;gap:4px!important}.nav-item:hover{transform:none!important}.nav-item.active::after{left:50%!important;right:auto!important;top:auto!important;bottom:4px!important;width:26px!important;height:3px!important;transform:translateX(-50%)!important}.nav-label{font-size:9px!important}.nav-icon{width:19px!important;height:19px!important}.sb-bottom{display:flex!important;flex-direction:row!important;align-items:center!important;gap:5px!important;padding:0!important;margin:0!important;border:0!important}.sb-bottom .top-actions{gap:4px!important}.top-status{display:none!important}.top-icon-btn,.top-user{width:36px!important;height:36px!important;border-radius:10px!important}.legacy-controls{display:none!important}.main{margin-left:0!important;margin-right:0!important;padding:24px 14px 98px!important}.page-title{font-size:22px!important}}
 @media(max-width:460px){.top-icon-btn,.top-user{width:32px!important;height:32px!important}.nav-label{font-size:8px!important}.nav-icon{width:18px!important;height:18px!important}.main{padding-left:10px!important;padding-right:10px!important}}
 
-/* ===== MENU ONLY: remove the partial VANTA text above the menu ===== */
-.sb-brand.menu-only{
-  width:38px!important;
-  min-width:38px!important;
-  height:38px!important;
-  padding:0!important;
-  margin:0!important;
-  border:0!important;
-  border-radius:0!important;
-  background:none!important;
-  box-shadow:none!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-}
-.sb-brand.menu-only .menu-toggle{
-  margin:0!important;
-}
-.sb-brand.menu-only .sb-title{
-  display:none!important;
-}
-
 /* ===== VANTA COLLAPSIBLE TOP MENU ===== */
 .sidebar{
   position:fixed!important;left:0!important;right:0!important;top:0!important;bottom:auto!important;
@@ -4164,21 +4132,6 @@ body[dir="rtl"] .sidebar{left:auto!important;right:0!important}body[dir="rtl"] .
 }
 @media(max-width:460px){.sb-brand{width:142px!important;min-width:142px!important}.sb-title{font-size:18px!important}.sb-bottom .top-actions .top-user{display:none!important}.main{padding-left:9px!important;padding-right:9px!important}}
 
-
-
-/* ===== VANTA 2026 COMMAND DECK ===== */
-.dash-hero{position:relative;display:flex;align-items:stretch;justify-content:space-between;gap:28px;min-height:205px;margin-bottom:18px;padding:30px 32px;border:1px solid rgba(192,132,252,.18);border-radius:28px;overflow:hidden;background:linear-gradient(120deg,rgba(24,10,43,.98),rgba(10,4,20,.96) 55%,rgba(31,12,54,.90));box-shadow:0 24px 70px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}
-.dash-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(168,85,247,.06) 45%,transparent 75%);pointer-events:none}.dash-hero-glow{position:absolute;width:300px;height:300px;right:-80px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.28),transparent 68%);filter:blur(6px)}.dash-hero-copy,.dash-hero-side{position:relative;z-index:1}.dash-kicker{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:900;letter-spacing:2.5px;color:#d8b4fe;margin-bottom:13px}.dash-pulse{width:8px;height:8px;border-radius:50%;background:#c084fc;box-shadow:0 0 18px rgba(192,132,252,.95)}.dash-title{font-size:38px;line-height:1.08;font-weight:900;letter-spacing:-1.5px;color:#fff;max-width:720px}.dash-sub{max-width:650px;margin-top:12px;font-size:13px;line-height:1.7;color:rgba(255,255,255,.48)}.dash-hero-side{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;min-width:160px}.dash-live{display:flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid rgba(34,197,94,.18);border-radius:12px;background:rgba(34,197,94,.05);font-size:10px;letter-spacing:1.1px;color:#d8ffe5}.dash-live span{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,.85)}.dash-updated{font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.5px}
-.dash-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.dash-metric{position:relative;min-height:132px;padding:18px 19px;border:1px solid rgba(168,85,247,.14);border-radius:20px;overflow:hidden;background:linear-gradient(145deg,rgba(22,9,39,.96),rgba(9,4,18,.96));box-shadow:0 14px 36px rgba(0,0,0,.18);transition:transform .22s,border-color .22s,box-shadow .22s}.dash-metric:hover{transform:translateY(-3px);border-color:rgba(192,132,252,.34);box-shadow:0 20px 46px rgba(86,33,139,.18)}.dash-metric:after{content:"";position:absolute;right:-30px;bottom:-45px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.16),transparent 68%)}.metric-top{display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,.42);font-size:9px;font-weight:900;letter-spacing:1.7px}.metric-top i{font-style:normal;color:#c084fc;font-size:15px}.metric-value{margin-top:15px;font-size:29px;line-height:1;font-weight:900;color:#fff;letter-spacing:-1px;position:relative;z-index:1}.metric-value span{font-size:11px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:0}.metric-value.compact{font-size:23px;letter-spacing:-.4px}.metric-value.domain-value{font-size:12px;line-height:1.35;word-break:break-all;max-width:95%;font-weight:700;letter-spacing:0;color:#e9d5ff}.metric-note{margin-top:12px;font-size:9.5px;color:rgba(255,255,255,.28);position:relative;z-index:1}
-.dash-main-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.75fr);gap:16px}.dash-panel{border:1px solid rgba(168,85,247,.14);border-radius:22px;background:linear-gradient(145deg,rgba(19,8,34,.96),rgba(8,3,15,.98));box-shadow:0 18px 48px rgba(0,0,0,.20);overflow:hidden}.dash-chart-panel{padding:20px 20px 8px}.dash-panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}.dash-panel-kicker{font-size:9px;font-weight:900;letter-spacing:2px;color:rgba(216,180,254,.55)}.dash-panel-title{font-size:17px;font-weight:800;color:#fff;margin-top:5px}.dash-mini-chip{font-size:8px;font-weight:900;letter-spacing:1.2px;color:#d8b4fe;padding:7px 9px;border-radius:9px;background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.16)}.dash-chart{height:275px}.dash-health-panel{padding:22px}.health-item{padding:19px 0;border-bottom:1px solid rgba(168,85,247,.10)}.health-head{display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,.68);font-size:12px;font-weight:700}.health-head b{font-size:17px;color:#fff}.health-track{height:8px;margin-top:12px;border-radius:999px;background:rgba(255,255,255,.05);overflow:hidden}.health-fill{height:100%;width:0;border-radius:999px;box-shadow:0 0 16px rgba(168,85,247,.35);transition:width .5s ease}.cpu-fill{background:linear-gradient(90deg,#7c3aed,#c084fc)!important}.mem-fill{background:linear-gradient(90deg,#16a34a,#4ade80)!important}.health-item small{display:block;margin-top:8px;color:rgba(255,255,255,.25);font-size:9px}.health-footer{display:flex;align-items:center;gap:8px;padding-top:17px;color:rgba(255,255,255,.38);font-size:9.5px}.health-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,.8)}#page-dashboard .alerts-box{margin-top:0;border-radius:16px;background:rgba(248,113,113,.055);border-color:rgba(248,113,113,.24)}
-/* ===== INBOUND ROUTE BOARD ===== */
-.inbound-hero{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;padding:25px 27px;border:1px solid rgba(192,132,252,.16);border-radius:24px;background:linear-gradient(125deg,rgba(24,9,43,.98),rgba(9,4,18,.98));overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.23)}.inbound-hero:after{content:"";position:absolute;right:-70px;top:-95px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.22),transparent 68%)}.inbound-hero>div{position:relative;z-index:1}.inbound-kicker{display:flex;align-items:center;gap:8px;color:#c084fc;font-size:9px;font-weight:900;letter-spacing:2px}.inbound-kicker span:first-child{width:7px;height:7px;border-radius:50%;background:#c084fc;box-shadow:0 0 13px rgba(192,132,252,.85)}.inbound-title{margin-top:9px;font-size:32px;line-height:1;font-weight:900;letter-spacing:-1px;color:#fff}.inbound-sub{max-width:670px;margin-top:10px;color:rgba(255,255,255,.40);font-size:11px;line-height:1.65}.inbound-new{position:relative;z-index:2;min-width:145px;height:46px;justify-content:center}.inbound-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;margin-bottom:14px;padding:10px;border:1px solid rgba(168,85,247,.12);border-radius:17px;background:rgba(8,3,16,.72)}.inbound-search{height:48px;border-radius:12px!important;background:rgba(255,255,255,.025)!important}.inbound-search input{font-size:12px!important}.inbound-filters{height:48px!important;padding:5px!important;border-radius:12px!important}.inbound-filters .chip{height:36px!important;border-radius:9px!important}.inbound-board{border:1px solid rgba(192,132,252,.15);border-radius:22px;background:linear-gradient(145deg,rgba(19,8,34,.96),rgba(7,3,15,.99));box-shadow:0 24px 60px rgba(0,0,0,.25);overflow:hidden}.inbound-board-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid rgba(168,85,247,.10);background:linear-gradient(90deg,rgba(124,58,237,.09),transparent)}.inbound-board-head span{display:block;font-size:10px;font-weight:900;letter-spacing:1.7px;color:#e9d5ff}.inbound-board-head small{display:block;margin-top:4px;font-size:9px;color:rgba(255,255,255,.28)}.route-legend{display:flex!important;align-items:center;gap:7px}.route-legend span{display:inline!important;font-size:9px!important;letter-spacing:.5px!important;color:rgba(255,255,255,.42)!important}.route-legend i{display:block;width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 11px rgba(74,222,128,.85)}
-#page-inbounds .tbl-wrap{padding:8px 12px 12px;overflow-x:auto}#page-inbounds .tbl{border-collapse:separate;border-spacing:0 6px}#page-inbounds .tbl thead{background:transparent!important}#page-inbounds .tbl th{border:0!important;height:38px!important;background:transparent!important;color:rgba(216,180,254,.45)!important;font-size:8px!important;letter-spacing:1.5px!important}#page-inbounds .tbl td{height:58px!important;border:0!important;border-top:1px solid rgba(168,85,247,.08)!important;border-bottom:1px solid rgba(168,85,247,.08)!important;background:rgba(255,255,255,.018)!important}#page-inbounds .tbl td:first-child{border-left:1px solid rgba(168,85,247,.08)!important;border-radius:12px 0 0 12px}#page-inbounds .tbl td:last-child{border-right:1px solid rgba(168,85,247,.08)!important;border-radius:0 12px 12px 0}#page-inbounds .tbl tbody tr:hover td{background:rgba(168,85,247,.055)!important;border-color:rgba(192,132,252,.16)!important}#page-inbounds .m-cards{display:none!important;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px}.inbound-toolbar-note{display:none!important}#page-inbounds .act-btn{padding:7px 9px!important;font-size:9px!important;border-radius:8px!important}
-/* Clear VANTA branding on the subscription page */
-.sub-eyebrow{color:#e9d5ff!important;font-size:10px!important;letter-spacing:3px!important}.sub-brandline .header-title{font-size:30px!important;color:#fff!important;background:none!important;-webkit-text-fill-color:#fff!important;letter-spacing:4px!important;text-shadow:0 0 18px rgba(192,132,252,.28)}.header-sub{color:rgba(255,255,255,.38)!important}
-@media(max-width:900px){.dash-hero{min-height:0;padding:24px}.dash-title{font-size:31px}.dash-hero-side{min-width:130px}.dash-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.dash-main-grid{grid-template-columns:1fr}.dash-health-panel{min-height:280px}.inbound-hero{align-items:flex-start;flex-direction:column}.inbound-new{align-self:flex-start}.inbound-tools{grid-template-columns:1fr}.inbound-filters{width:max-content;min-width:240px}}
-@media(max-width:760px){.dash-hero{padding:20px;border-radius:20px;gap:16px}.dash-title{font-size:26px}.dash-sub{font-size:11px}.dash-hero-side{display:none}.dash-metrics{gap:9px}.dash-metric{min-height:118px;padding:15px;border-radius:16px}.metric-value{font-size:25px}.dash-chart{height:220px}.dash-panel{border-radius:18px}.dash-chart-panel{padding:16px 12px 5px}.dash-health-panel{padding:17px}.inbound-hero{padding:20px;border-radius:20px}.inbound-title{font-size:27px}.inbound-sub{font-size:10px}.inbound-new{width:100%}.inbound-board{border-radius:18px}.inbound-board .tbl-wrap{display:none!important}.inbound-board .m-cards{display:grid!important}.inbound-tools{padding:8px}.inbound-search{height:44px!important}.inbound-filters{height:44px!important;width:100%;min-width:0;justify-content:center}.inbound-filters .chip{flex:1}}
-@media(max-width:460px){.dash-metrics{grid-template-columns:1fr}.dash-title{font-size:24px}.inbound-title{font-size:24px}.sub-brandline .header-title{font-size:25px!important}}
 
 /* ===== V5 INBOUND + LOGIN VISUAL REDESIGN (UI ONLY) ===== */
 .inbound-toolbar-note{
@@ -4249,79 +4202,62 @@ body[dir="rtl"] .sidebar{left:auto!important;right:0!important}body[dir="rtl"] .
   #mo-add .mo-box{grid-template-columns:1fr;grid-template-areas:'title' 'remark' 'traffic' 'ips' 'days' 'vless' 'trojan' 'port' 'create';padding:18px!important}
 }
 
+        /* ===== VANTA UI OVERHAUL — dashboard + inbounds ===== */
+        .sidebar::before{{content:'VANTA';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Inter',sans-serif;font-size:15px;font-weight:900;letter-spacing:5px;color:#fff;text-shadow:0 0 18px rgba(168,85,247,.45);pointer-events:none;z-index:0}}
+        .sb-brand,.sb-nav,.sb-bottom{{position:relative;z-index:1}}
+        #page-dashboard{{position:relative;overflow:hidden;padding:6px 0 18px}}
+        #page-dashboard::before{{content:'';position:absolute;inset:-90px -120px auto;height:360px;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(168,85,247,.18),transparent 62%);z-index:-1}}
+        #page-dashboard .page-header{{padding:28px 30px 24px!important;margin-bottom:18px!important;border:1px solid rgba(168,85,247,.18);border-radius:24px;background:linear-gradient(135deg,rgba(25,12,46,.95),rgba(8,5,18,.88));box-shadow:0 22px 55px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05);position:relative;overflow:hidden}}
+        #page-dashboard .page-header::after{{content:'SYSTEM COMMAND CENTER';position:absolute;right:24px;bottom:18px;font-size:9px;font-weight:900;letter-spacing:3px;color:rgba(216,180,254,.34)}}
+        #page-dashboard .page-title{{font-size:32px!important;font-weight:900!important;letter-spacing:-.8px!important}}
+        #page-dashboard .page-sub{{margin-top:7px!important;color:rgba(216,180,254,.55)!important}}
+        #page-dashboard .alerts-box{{border:1px solid rgba(251,191,36,.16)!important;border-radius:18px!important;background:rgba(38,24,5,.32)!important;box-shadow:none!important;margin-bottom:18px!important}}
+        #page-dashboard .stats-row{{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;margin-bottom:16px!important}}
+        #page-dashboard .stat-card{{min-height:132px!important;padding:22px!important;border-radius:20px!important;border:1px solid rgba(168,85,247,.18)!important;background:linear-gradient(150deg,rgba(23,10,42,.96),rgba(8,5,18,.98))!important;box-shadow:0 16px 38px rgba(0,0,0,.28)!important;position:relative!important;overflow:hidden!important}}
+        #page-dashboard .stat-card::before{{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#7c3aed,#c084fc,transparent)}}
+        #page-dashboard .stat-card::after{{content:'';position:absolute;width:90px;height:90px;right:-35px;bottom:-40px;border-radius:50%;background:rgba(168,85,247,.10);filter:blur(2px)}}
+        #page-dashboard .stat-label{{font-size:10px!important;letter-spacing:2px!important;color:rgba(216,180,254,.58)!important;text-transform:uppercase}}
+        #page-dashboard .stat-val{{font-size:30px!important;font-weight:900!important;margin-top:15px!important;letter-spacing:-1px!important;position:relative;z-index:1}}
+        #page-dashboard .stat-unit{{font-size:12px!important;color:rgba(255,255,255,.38)!important}}
+        #page-dashboard .grid-2{{gap:14px!important;margin-bottom:16px!important}}
+        #page-dashboard .grid-2 .card,#page-dashboard > .card{{min-height:126px!important;padding:22px!important;border-radius:20px!important;border:1px solid rgba(168,85,247,.16)!important;background:linear-gradient(145deg,rgba(20,9,37,.96),rgba(7,4,16,.98))!important;box-shadow:0 16px 40px rgba(0,0,0,.25)!important}}
+        #page-dashboard .card-hd{{margin-bottom:18px!important}}
+        #page-dashboard .card-title{{font-size:12px!important;letter-spacing:1.5px!important;text-transform:uppercase!important;color:#e9d5ff!important}}
+        #page-dashboard .sys-bar{{height:10px!important;border-radius:99px!important;background:rgba(168,85,247,.09)!important;overflow:hidden!important}}
+        #page-dashboard .sys-fill{{height:100%!important;border-radius:99px!important;box-shadow:0 0 18px rgba(168,85,247,.55)!important}}
+        #page-dashboard .chart-container{{height:300px!important;padding-top:8px!important}}
 
-/* ===== VANTA COMMAND DECK / INBOUND 2026 VISUAL PASS ===== */
-.dash-hero{padding-top:72px!important}
-.dash-brand-center{position:absolute!important;top:16px!important;left:50%!important;transform:translateX(-50%)!important;z-index:2!important;font-size:18px!important;font-weight:900!important;letter-spacing:7px!important;color:#fff!important;text-shadow:0 0 18px rgba(192,132,252,.72),0 0 42px rgba(124,58,237,.42)!important;white-space:nowrap!important;opacity:.96!important}
-.dash-brand-center::before,.dash-brand-center::after{content:""!important;position:absolute!important;top:50%!important;width:74px!important;height:1px!important;background:linear-gradient(90deg,transparent,rgba(192,132,252,.7))!important;box-shadow:0 0 10px rgba(168,85,247,.28)!important}
-.dash-brand-center::before{right:calc(100% + 16px)!important}
-.dash-brand-center::after{left:calc(100% + 16px)!important;transform:scaleX(-1)!important}
+        /* Inbounds: connection control deck */
+        #page-inbounds{{position:relative;overflow:hidden}}
+        #page-inbounds .page-header{{padding:24px 28px!important;margin-bottom:14px!important;border-radius:22px!important;background:linear-gradient(135deg,rgba(24,10,45,.98),rgba(8,4,18,.96))!important;border:1px solid rgba(168,85,247,.22)!important;box-shadow:0 20px 50px rgba(0,0,0,.24)!important}}
+        #page-inbounds .page-title{{font-size:30px!important;font-weight:900!important;letter-spacing:-.7px!important}}
+        #page-inbounds .page-sub{{margin-top:6px!important;color:rgba(216,180,254,.52)!important}}
+        #page-inbounds .page-header .btn-gold{{min-height:44px!important;padding:0 20px!important;border-radius:12px!important;background:linear-gradient(135deg,#7c3aed,#a855f7)!important;box-shadow:0 10px 25px rgba(124,58,237,.28)!important;border:1px solid rgba(216,180,254,.35)!important}}
+        #page-inbounds .inbound-toolbar-note{{margin:0 0 14px!important;padding:16px 20px!important;border-radius:18px!important;background:linear-gradient(90deg,rgba(124,58,237,.12),rgba(20,8,36,.82))!important;border:1px solid rgba(168,85,247,.16)!important;box-shadow:none!important}}
+        #page-inbounds .inbound-orb{{width:34px!important;height:34px!important;border-radius:12px!important;background:linear-gradient(135deg,#7c3aed,#c084fc)!important;box-shadow:0 0 22px rgba(168,85,247,.35)!important}}
+        #page-inbounds .inbound-toolbar-note b{{font-size:13px!important;letter-spacing:.2px!important}}
+        #page-inbounds .inbound-toolbar-note small{{color:rgba(255,255,255,.42)!important}}
+        #page-inbounds .tb{{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:12px!important;align-items:center!important;padding:10px!important;margin-bottom:14px!important;border:1px solid rgba(168,85,247,.16)!important;border-radius:18px!important;background:rgba(10,5,20,.74)!important}}
+        #page-inbounds .search-wrap{{height:46px!important;border-radius:12px!important;background:rgba(168,85,247,.055)!important;border-color:rgba(168,85,247,.16)!important}}
+        #page-inbounds .search-wrap input{{font-size:13px!important;color:#fff!important}}
+        #page-inbounds .filter-chips{{gap:6px!important}}
+        #page-inbounds .filter-chips .chip{{min-width:72px!important;height:38px!important;border-radius:10px!important;background:rgba(168,85,247,.05)!important;border-color:rgba(168,85,247,.15)!important}}
+        #page-inbounds .filter-chips .chip.active{{background:linear-gradient(135deg,#7c3aed,#a855f7)!important;color:#fff!important;border-color:rgba(216,180,254,.45)!important;box-shadow:0 7px 18px rgba(124,58,237,.22)!important}}
+        #page-inbounds > .card{{border-radius:20px!important;border:1px solid rgba(168,85,247,.18)!important;background:rgba(9,4,18,.88)!important;box-shadow:0 20px 55px rgba(0,0,0,.26)!important}}
+        #page-inbounds .tbl{{border-collapse:separate!important;border-spacing:0 7px!important;padding:0 10px!important}}
+        #page-inbounds .tbl thead th{{padding:13px 12px!important;border:0!important;color:rgba(216,180,254,.48)!important;font-size:9px!important;letter-spacing:1.8px!important;text-transform:uppercase!important}}
+        #page-inbounds .tbl tbody tr{{background:linear-gradient(90deg,rgba(168,85,247,.055),rgba(168,85,247,.018))!important;transition:transform .18s ease,box-shadow .18s ease!important}}
+        #page-inbounds .tbl tbody tr:hover{{transform:translateY(-1px)!important;box-shadow:0 10px 24px rgba(0,0,0,.24)!important}}
+        #page-inbounds .tbl tbody td{{padding:15px 12px!important;border-top:1px solid rgba(168,85,247,.10)!important;border-bottom:1px solid rgba(168,85,247,.10)!important;background:transparent!important}}
+        #page-inbounds .tbl tbody td:first-child{{border-left:1px solid rgba(168,85,247,.10)!important;border-radius:12px 0 0 12px!important}}
+        #page-inbounds .tbl tbody td:last-child{{border-right:1px solid rgba(168,85,247,.10)!important;border-radius:0 12px 12px 0!important}}
+        #page-inbounds .m-card{{background:linear-gradient(145deg,rgba(22,9,39,.96),rgba(8,4,18,.98))!important;border:1px solid rgba(168,85,247,.16)!important;border-radius:18px!important;box-shadow:0 14px 35px rgba(0,0,0,.25)!important}}
 
-/* Subscription: VANTA text only, no purple V tile */
-.sub-brandline{gap:0!important;margin-top:9px!important}
-.sub-brandline .header-title{display:block!important}
+        /* Subscription logo badge */
+        .sub-brandline .brand-mark{{width:auto!important;min-width:88px!important;height:36px!important;padding:0 13px!important;border-radius:10px!important;font-size:12px!important;letter-spacing:2.2px!important;font-weight:900!important;white-space:nowrap!important;box-shadow:0 0 24px rgba(168,85,247,.35)!important}}
+        @media(max-width:900px){{.sidebar::before{{display:none}}#page-dashboard .stats-row{{grid-template-columns:repeat(2,minmax(0,1fr))!important}}#page-inbounds .tb{{grid-template-columns:1fr!important}}}}
+        @media(max-width:600px){{#page-dashboard .page-header,#page-inbounds .page-header{{padding:20px!important}}#page-dashboard .page-title,#page-inbounds .page-title{{font-size:25px!important}}#page-dashboard .stats-row{{grid-template-columns:1fr!important}}#page-dashboard .chart-container{{height:230px!important}}#page-inbounds .tb{{padding:8px!important}}#page-inbounds .filter-chips{{justify-content:stretch!important}}#page-inbounds .filter-chips .chip{{flex:1!important}}}}
 
-/* Inbounds: completely new command-console composition */
-#page-inbounds{position:relative!important}
-#page-inbounds::before{content:""!important;position:absolute!important;inset:-30px -34px auto!important;height:360px!important;pointer-events:none!important;background:radial-gradient(circle at 16% 10%,rgba(124,58,237,.17),transparent 30%),radial-gradient(circle at 86% 0%,rgba(192,132,252,.13),transparent 28%)!important;z-index:-1!important}
-#page-inbounds .inbound-hero{min-height:178px!important;margin-bottom:14px!important;padding:28px 30px!important;align-items:center!important;border-radius:26px!important;border:1px solid rgba(192,132,252,.22)!important;background:linear-gradient(120deg,rgba(25,9,47,.98),rgba(9,4,20,.96) 58%,rgba(33,11,56,.94))!important;box-shadow:0 26px 70px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.055)!important}
-#page-inbounds .inbound-hero::before{content:""!important;position:absolute!important;inset:0!important;background-image:linear-gradient(rgba(192,132,252,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(192,132,252,.035) 1px,transparent 1px)!important;background-size:34px 34px!important;mask-image:linear-gradient(to right,#000,transparent 90%)!important;pointer-events:none!important}
-#page-inbounds .inbound-hero::after{right:-90px!important;top:-120px!important;width:330px!important;height:330px!important;background:radial-gradient(circle,rgba(168,85,247,.26),rgba(124,58,237,.08) 42%,transparent 70%)!important;filter:blur(2px)!important}
-#page-inbounds .inbound-kicker{position:relative!important;z-index:2!important;padding:6px 10px!important;border:1px solid rgba(192,132,252,.18)!important;border-radius:999px!important;background:rgba(168,85,247,.07)!important;width:max-content!important}
-#page-inbounds .inbound-kicker span:first-child{width:6px!important;height:6px!important}
-#page-inbounds .inbound-title{position:relative!important;z-index:2!important;font-size:36px!important;letter-spacing:-1.4px!important;margin-top:13px!important}
-#page-inbounds .inbound-sub{position:relative!important;z-index:2!important;max-width:720px!important;font-size:12px!important;color:rgba(255,255,255,.48)!important}
-#page-inbounds .inbound-new{height:52px!important;min-width:170px!important;border-radius:15px!important;font-size:12px!important;box-shadow:0 14px 34px rgba(124,58,237,.30)!important}
-
-.inbound-intel{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;margin-bottom:14px!important}
-.intel-card{position:relative!important;display:flex!important;align-items:center!important;gap:12px!important;min-height:82px!important;padding:14px 15px!important;border:1px solid rgba(192,132,252,.13)!important;border-radius:18px!important;background:linear-gradient(145deg,rgba(20,8,38,.92),rgba(8,3,17,.96))!important;box-shadow:0 15px 35px rgba(0,0,0,.20)!important;overflow:hidden!important;transition:.22s ease!important}
-.intel-card::after{content:""!important;position:absolute!important;right:-30px!important;bottom:-38px!important;width:90px!important;height:90px!important;border-radius:50%!important;background:radial-gradient(circle,rgba(168,85,247,.16),transparent 70%)!important}
-.intel-card:hover{transform:translateY(-2px)!important;border-color:rgba(192,132,252,.28)!important;box-shadow:0 20px 42px rgba(124,58,237,.13)!important}
-.intel-card .intel-icon{width:38px!important;height:38px!important;flex:0 0 38px!important;display:grid!important;place-items:center!important;border-radius:12px!important;color:#e9d5ff!important;font-size:15px!important;background:linear-gradient(145deg,rgba(124,58,237,.28),rgba(168,85,247,.08))!important;border:1px solid rgba(192,132,252,.18)!important;box-shadow:inset 0 0 16px rgba(168,85,247,.08)!important}
-.intel-card>div:last-child{position:relative!important;z-index:1!important;min-width:0!important}
-.intel-card span{display:block!important;font-size:8px!important;font-weight:900!important;letter-spacing:1.4px!important;color:rgba(216,180,254,.48)!important}
-.intel-card b{display:block!important;margin-top:4px!important;font-size:20px!important;line-height:1!important;color:#fff!important;letter-spacing:-.4px!important}
-.intel-card small{display:block!important;margin-top:4px!important;font-size:8px!important;color:rgba(255,255,255,.25)!important}
-.intel-primary{border-color:rgba(168,85,247,.24)!important;background:linear-gradient(145deg,rgba(34,12,62,.94),rgba(10,4,21,.96))!important}
-.intel-primary b{color:#d8b4fe!important}
-.intel-status .intel-scan{width:38px!important;height:38px!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;gap:4px!important;padding:8px!important;border-radius:12px!important;background:rgba(74,222,128,.05)!important;border:1px solid rgba(74,222,128,.16)!important}
-.intel-scan i{display:block!important;width:4px!important;border-radius:4px!important;background:#4ade80!important;box-shadow:0 0 10px rgba(74,222,128,.7)!important;animation:intelPulse 1.2s ease-in-out infinite!important}
-.intel-scan i:nth-child(1){height:9px!important}.intel-scan i:nth-child(2){height:18px!important;animation-delay:.18s!important}.intel-scan i:nth-child(3){height:13px!important;animation-delay:.36s!important}
-@keyframes intelPulse{0%,100%{opacity:.35;transform:scaleY(.72)}50%{opacity:1;transform:scaleY(1)}}
-
-#page-inbounds .inbound-tools{grid-template-columns:minmax(0,1fr) auto!important;gap:10px!important;padding:8px!important;margin-bottom:14px!important;border-radius:18px!important;background:rgba(6,2,14,.68)!important;border:1px solid rgba(192,132,252,.13)!important;box-shadow:0 14px 36px rgba(0,0,0,.16)!important}
-#page-inbounds .inbound-search{height:48px!important;border-radius:13px!important;background:rgba(255,255,255,.022)!important}
-#page-inbounds .inbound-filters{height:48px!important;border-radius:13px!important}
-#page-inbounds .inbound-board{border-radius:24px!important;background:linear-gradient(145deg,rgba(18,7,33,.97),rgba(6,2,13,.99))!important;border:1px solid rgba(192,132,252,.20)!important;box-shadow:0 28px 75px rgba(0,0,0,.34)!important}
-#page-inbounds .inbound-board-head{padding:19px 22px!important;background:linear-gradient(90deg,rgba(124,58,237,.14),rgba(168,85,247,.035),transparent)!important;border-bottom:1px solid rgba(192,132,252,.11)!important}
-#page-inbounds .inbound-board-head>div:first-child::before{content:"01"!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:27px!important;height:27px!important;margin-right:9px!important;vertical-align:middle!important;border-radius:9px!important;background:rgba(168,85,247,.10)!important;border:1px solid rgba(192,132,252,.16)!important;color:#c084fc!important;font-size:9px!important;font-weight:900!important}
-#page-inbounds .route-legend{padding:7px 10px!important;border:1px solid rgba(74,222,128,.14)!important;border-radius:999px!important;background:rgba(74,222,128,.04)!important}
-#page-inbounds .tbl-wrap{padding:9px 12px 14px!important}
-#page-inbounds .tbl{border-spacing:0 8px!important}
-#page-inbounds .tbl th{height:34px!important;color:rgba(216,180,254,.40)!important;font-size:8px!important;letter-spacing:1.7px!important}
-#page-inbounds .tbl td{height:66px!important;background:linear-gradient(90deg,rgba(255,255,255,.015),rgba(168,85,247,.012))!important;border-top:1px solid rgba(192,132,252,.08)!important;border-bottom:1px solid rgba(192,132,252,.08)!important}
-#page-inbounds .tbl tbody tr:hover td{background:linear-gradient(90deg,rgba(124,58,237,.10),rgba(168,85,247,.025))!important;border-top-color:rgba(192,132,252,.20)!important;border-bottom-color:rgba(192,132,252,.20)!important}
-#page-inbounds .act-btn{padding:7px 10px!important;border-radius:10px!important;font-size:9px!important;backdrop-filter:blur(8px)!important}
-
-@media(max-width:980px){.inbound-intel{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:760px){.dash-hero{padding-top:62px!important}.dash-brand-center{top:13px!important;font-size:15px!important;letter-spacing:5px!important}.dash-brand-center::before,.dash-brand-center::after{width:42px!important}.dash-brand-center::before{right:calc(100% + 10px)!important}.dash-brand-center::after{left:calc(100% + 10px)!important}.inbound-intel{grid-template-columns:1fr 1fr!important}.intel-card{min-height:76px!important;padding:12px!important}.intel-card b{font-size:18px!important}.intel-card small{font-size:7px!important}.intel-card .intel-icon,.intel-status .intel-scan{width:34px!important;height:34px!important;flex-basis:34px!important}.#page-inbounds .inbound-hero{padding:22px!important}.#page-inbounds .inbound-title{font-size:29px!important}.#page-inbounds .inbound-new{width:100%!important}.#page-inbounds .inbound-tools{grid-template-columns:1fr!important}}
-@media(max-width:460px){.inbound-intel{grid-template-columns:1fr!important}.dash-brand-center{font-size:14px!important}.dash-brand-center::before,.dash-brand-center::after{display:none!important}}
-
-/* ===== FINAL VANTA BRANDING OVERRIDES ===== */
-.sub-eyebrow{color:#e9d5ff!important;font-size:10px!important;letter-spacing:3px!important}.sub-brandline .header-title{font-size:30px!important;color:#fff!important;background:none!important;-webkit-text-fill-color:#fff!important;letter-spacing:4px!important;text-shadow:0 0 18px rgba(192,132,252,.28)!important}.header-sub{color:rgba(255,255,255,.38)!important}
-#page-inbounds .m-cards{display:none!important;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px}
-@media(max-width:760px){#page-inbounds .m-cards{display:grid!important}.inbound-board .tbl-wrap{display:none!important}}
-</style>
-
-<style>
-/* VANTA TOTAL UI REBUILD */
-body{background:#050008!important}
-.vanta-new-login{background:linear-gradient(135deg,#050008,#1a0730);border-radius:32px;box-shadow:0 0 60px #7c3aed55;padding:50px}
-.dashboard-new{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.vanta-widget{background:linear-gradient(145deg,#160525,#07010d);border:1px solid #7c3aed55;border-radius:28px;padding:30px;transition:.3s}
-.vanta-widget:hover{transform:translateY(-8px);border-color:#c084fc}
-.vanta-title{font-size:44px;font-weight:900;letter-spacing:-2px}
-.vanta-glow{color:#fff;text-shadow:0 0 25px #a855f7}
 </style>
 </head>
 <body>
@@ -4396,7 +4332,8 @@ body{background:#050008!important}
 
   <!-- TOP NAVIGATION -->
   <aside class="sidebar" id="sb">
-    <div class="sb-brand menu-only" aria-label="Menu">
+    <div class="sb-brand" aria-label="VANTA Panel">
+      <div class="sb-title">VANTA</div>
       <button class="menu-toggle" id="menu-toggle" type="button" onclick="togglePanelMenu()" aria-expanded="false" aria-controls="panel-nav" title="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <span class="menu-dot"></span>
@@ -4456,87 +4393,80 @@ body{background:#050008!important}
 
     <!-- Dashboard -->
     <section class="page active" id="page-dashboard">
-      <div class="dash-hero">
-        <div class="dash-brand-center" aria-label="VANTA">VANTA</div>
-        <div class="dash-hero-glow"></div>
-        <div class="dash-hero-copy">
-          <div class="dash-kicker"><span class="dash-pulse"></span><span data-en="VANTA CONTROL CENTER" data-fa="مرکز کنترل VANTA">VANTA CONTROL CENTER</span></div>
-          <div class="dash-title" data-en="Command your gateway." data-fa="کنترل کامل گیت‌وی شما.">Command your gateway.</div>
-          <div class="dash-sub" data-en="Live infrastructure overview, traffic health and connection activity in one place." data-fa="وضعیت زنده زیرساخت، سلامت ترافیک و فعالیت اتصال‌ها در یک نما.">Live infrastructure overview, traffic health and connection activity in one place.</div>
-        </div>
-        <div class="dash-hero-side">
-          <div class="dash-live"><span></span><b data-en="SYSTEM ONLINE" data-fa="سیستم آنلاین">SYSTEM ONLINE</b></div>
-          <div class="dash-updated" id="last-up">-</div>
+      <div class="page-header">
+        <div>
+          <div class="page-title" data-en="Dashboard" data-fa="داشبورد">Dashboard</div>
+          <div class="page-sub" id="last-up">-</div>
         </div>
       </div>
+
       <div class="alerts-box" id="alerts-box">
-        <div class="alerts-title"><span>⚠️</span><span data-en="SYSTEM WARNINGS" data-fa="هشدارهای سیستم">SYSTEM WARNINGS</span></div>
+        <div class="alerts-title">
+          <span>⚠️</span>
+          <span data-en="SYSTEM WARNINGS" data-fa="هشدارهای سیستم">SYSTEM WARNINGS</span>
+        </div>
         <div id="alerts-list"></div>
       </div>
-      <div class="dash-metrics">
-        <div class="dash-metric"><div class="metric-top"><span data-en="TRAFFIC" data-fa="ترافیک">TRAFFIC</span><i>↗</i></div><div class="metric-value" id="sv-traffic">-<span> MB</span></div><div class="metric-note" data-en="Total transferred" data-fa="انتقال کل">Total transferred</div></div>
-        <div class="dash-metric"><div class="metric-top"><span data-en="INBOUNDS" data-fa="اینباندها">INBOUNDS</span><i>◈</i></div><div class="metric-value" id="sv-links">-</div><div class="metric-note" data-en="Managed connections" data-fa="اتصال‌های مدیریت‌شده">Managed connections</div></div>
-        <div class="dash-metric"><div class="metric-top"><span data-en="UPTIME" data-fa="آپتایم">UPTIME</span><i>◷</i></div><div class="metric-value compact" id="sv-uptime">-</div><div class="metric-note" data-en="Current session" data-fa="نشست فعلی">Current session</div></div>
-        <div class="dash-metric"><div class="metric-top"><span data-en="ENDPOINT" data-fa="نقطه اتصال">ENDPOINT</span><i>⌁</i></div><div class="metric-value domain-value" id="sv-domain">-</div><div class="metric-note" data-en="Public gateway" data-fa="گیت‌وی عمومی">Public gateway</div></div>
+
+      <div class="stats-row">
+        <div class="stat-card" style="animation-delay:.08s"><div class="stat-label" data-en="Traffic" data-fa="ترافیک">Traffic</div><div class="stat-val" id="sv-traffic">-<span class="stat-unit"> MB</span></div></div>
+        <div class="stat-card" style="animation-delay:.16s"><div class="stat-label" data-en="Inbounds" data-fa="اینباندها">Inbounds</div><div class="stat-val" id="sv-links">-</div></div>
+        <div class="stat-card" style="animation-delay:.24s"><div class="stat-label" data-en="Uptime" data-fa="آپتایم">Uptime</div><div class="stat-val" id="sv-uptime" style="font-size:15px">-</div></div>
+        <div class="stat-card" style="animation-delay:.32s"><div class="stat-label" data-en="Domain" data-fa="دامنه">Domain</div><div class="stat-val" id="sv-domain" style="font-size:10px;word-break:break-all;font-weight:500">-</div></div>
       </div>
-      <div class="dash-main-grid">
-        <div class="dash-panel dash-chart-panel">
-          <div class="dash-panel-head"><div><div class="dash-panel-kicker" data-en="NETWORK ACTIVITY" data-fa="فعالیت شبکه">NETWORK ACTIVITY</div><div class="dash-panel-title" data-en="Traffic pulse" data-fa="نبض ترافیک">Traffic pulse</div></div><div class="dash-mini-chip" data-en="LAST 24H" data-fa="۲۴ ساعت اخیر">LAST 24H</div></div>
-          <div class="chart-container dash-chart"><canvas id="tc"></canvas></div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-hd"><div class="card-title" data-en="CPU" data-fa="پردازنده">CPU</div><span id="cpu-v" style="font-size:17px;font-weight:700;color:var(--gold)">-%</span></div>
+          <div class="sys-bar"><div class="sys-fill" id="cpu-b" style="background:var(--gold)"></div></div>
         </div>
-        <div class="dash-panel dash-health-panel">
-          <div class="dash-panel-kicker" data-en="SYSTEM HEALTH" data-fa="سلامت سیستم">SYSTEM HEALTH</div>
-          <div class="health-item"><div class="health-head"><span data-en="CPU Load" data-fa="بار پردازنده">CPU Load</span><b id="cpu-v">-%</b></div><div class="health-track"><div class="health-fill cpu-fill" id="cpu-b" style="background:var(--gold)"></div></div><small data-en="Processing capacity in use" data-fa="ظرفیت پردازشی در حال استفاده">Processing capacity in use</small></div>
-          <div class="health-item"><div class="health-head"><span data-en="Memory" data-fa="حافظه">Memory</span><b id="mem-v">-%</b></div><div class="health-track"><div class="health-fill mem-fill" id="mem-b" style="background:var(--green)"></div></div><small data-en="RAM utilization" data-fa="مصرف رم">RAM utilization</small></div>
-          <div class="health-footer"><span class="health-dot"></span><span data-en="Gateway services operational" data-fa="سرویس‌های گیت‌وی فعال هستند">Gateway services operational</span></div>
+        <div class="card">
+          <div class="card-hd"><div class="card-title" data-en="Memory" data-fa="حافظه">Memory</div><span id="mem-v" style="font-size:17px;font-weight:700;color:var(--green)">-%</span></div>
+          <div class="sys-bar"><div class="sys-fill" id="mem-b" style="background:var(--green)"></div></div>
         </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><div class="card-title" data-en="Hourly Traffic" data-fa="ترافیک ساعتی">Hourly Traffic</div></div>
+        <div class="chart-container"><canvas id="tc"></canvas></div>
       </div>
     </section>
 
     <!-- Inbounds -->
     <section class="page" id="page-inbounds">
-      <div class="inbound-hero">
+      <div class="page-header">
         <div>
-          <div class="inbound-kicker"><span></span><span data-en="VANTA CONNECTIONS" data-fa="اتصال‌های VANTA">VANTA CONNECTIONS</span></div>
-          <div class="inbound-title" data-en="Inbound control" data-fa="مدیریت اینباندها">Inbound control</div>
-          <div class="inbound-sub" data-en="Build, monitor and manage every gateway connection from a cleaner workspace." data-fa="تمام اتصال‌های گیت‌وی را از یک فضای مرتب بسازید، پایش کنید و مدیریت کنید.">Build, monitor and manage every gateway connection from a cleaner workspace.</div>
+          <div class="page-title" data-en="Inbounds" data-fa="اینباندها">Inbounds</div>
+          <div class="page-sub" data-en="VLESS over WebSocket · TLS" data-fa="VLESS روی WebSocket با TLS">VLESS over WebSocket · TLS</div>
         </div>
-        <button class="btn btn-gold inbound-new" onclick="showAddMo()" data-en="+ New Inbound" data-fa="+ اینباند جدید">+ New Inbound</button>
+        <button class="btn btn-gold" onclick="showAddMo()" data-en="+ New Inbound" data-fa="+ اینباند جدید">+ New Inbound</button>
       </div>
-      <div class="inbound-intel" aria-label="Inbound overview">
-        <div class="intel-card intel-primary">
-          <div class="intel-icon">◈</div>
-          <div><span data-en="ROUTE MATRIX" data-fa="ماتریس مسیرها">ROUTE MATRIX</span><b id="inbound-total-count">0</b><small data-en="managed gateways" data-fa="گیت‌وی مدیریت‌شده">managed gateways</small></div>
-        </div>
-        <div class="intel-card">
-          <div class="intel-icon">●</div>
-          <div><span data-en="ACTIVE NOW" data-fa="فعال در لحظه">ACTIVE NOW</span><b id="inbound-active-count">0</b><small data-en="live routes" data-fa="مسیر زنده">live routes</small></div>
-        </div>
-        <div class="intel-card">
-          <div class="intel-icon">⌁</div>
-          <div><span data-en="SECURE LINK" data-fa="لینک امن">SECURE LINK</span><b>TLS</b><small data-en="encrypted transport" data-fa="انتقال رمزنگاری‌شده">encrypted transport</small></div>
-        </div>
-        <div class="intel-card intel-status">
-          <div class="intel-scan"><i></i><i></i><i></i></div>
-          <div><span data-en="CONTROL MODE" data-fa="حالت کنترل">CONTROL MODE</span><b>LIVE</b><small data-en="changes apply instantly" data-fa="تغییرات فوری اعمال می‌شوند">changes apply instantly</small></div>
-        </div>
+      <div class="inbound-toolbar-note">
+        <span class="inbound-orb"></span>
+        <div><b data-en="Connection Center" data-fa="مرکز اتصال">Connection Center</b><small data-en="Create and manage connections without changing your existing setup." data-fa="اتصال‌ها را بدون تغییر در ساختار فعلی ایجاد و مدیریت کنید.">Create and manage connections without changing your existing setup.</small></div>
       </div>
-      <div class="inbound-tools">
-        <div class="inbound-search search-wrap">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input id="srch" data-ph-en="Search inbound by name…" data-ph-fa="جستجوی اینباند بر اساس نام…" placeholder="Search inbound by name…" oninput="filterLinks()">
+      <div class="tb">
+        <div class="search-wrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="srch" data-ph-en="Search name…" data-ph-fa="جستجوی نام…" placeholder="Search name…" oninput="filterLinks()">
         </div>
-        <div class="filter-chips inbound-filters">
+        <div class="filter-chips">
           <button class="chip active" data-filter="all" onclick="setFilter('all',this)" data-en="All" data-fa="همه">All</button>
           <button class="chip" data-filter="active" onclick="setFilter('active',this)" data-en="Active" data-fa="فعال">Active</button>
           <button class="chip" data-filter="off" onclick="setFilter('off',this)" data-en="Off" data-fa="غیرفعال">Off</button>
         </div>
       </div>
-      <div class="inbound-board">
-        <div class="inbound-board-head"><div><span data-en="ACTIVE ROUTES" data-fa="مسیرهای فعال">ACTIVE ROUTES</span><small data-en="Live connection inventory" data-fa="فهرست زنده اتصال‌ها">Live connection inventory</small></div><div class="route-legend"><i></i><span data-en="Live" data-fa="زنده">Live</span></div></div>
+      <div class="card" style="padding:0;overflow:hidden">
         <div class="tbl-wrap">
           <table class="tbl">
-            <thead><tr><th>#</th><th data-en="Name" data-fa="نام">Name</th><th data-en="Type" data-fa="نوع">Type</th><th data-en="Usage" data-fa="مصرف">Usage</th><th data-en="IPs" data-fa="آی‌پی">IPs</th><th data-en="Expiry" data-fa="انقضا">Expiry</th><th data-en="Status" data-fa="وضعیت">Status</th><th data-en="Actions" data-fa="عملیات">Actions</th></tr></thead>
+            <thead><tr>
+              <th>#</th>
+              <th data-en="Name" data-fa="نام">Name</th>
+              <th data-en="Type" data-fa="نوع">Type</th>
+              <th data-en="Usage" data-fa="مصرف">Usage</th>
+              <th data-en="IPs" data-fa="آی‌پی">IPs</th>
+              <th data-en="Expiry" data-fa="انقضا">Expiry</th>
+              <th data-en="Status" data-fa="وضعیت">Status</th>
+              <th data-en="Actions" data-fa="عملیات">Actions</th>
+            </tr></thead>
             <tbody id="ltb"></tbody>
           </table>
         </div>
@@ -5119,10 +5049,6 @@ function renderLinks(links){
   const tb=$m('ltb');
   const em=$m('lempty');
   const mc=$m('mcards');
-  const totalCounter=$m('inbound-total-count');
-  const activeCounter=$m('inbound-active-count');
-  if(totalCounter) totalCounter.textContent=(links||[]).length;
-  if(activeCounter) activeCounter.textContent=(links||[]).filter(x=>x.active).length;
   if(!links||!links.length){
     tb.innerHTML='';mc.innerHTML='';em.style.display='block';
     em.textContent=em.getAttribute('data-'+lang)||'No inbounds found';
@@ -5719,5 +5645,3 @@ async def panel_page(request: Request):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=CONFIG["port"])
-
-# VANTA NEW DASHBOARD + LOGIN REDESIGN APPLIED
