@@ -2494,19 +2494,117 @@ def generate_landing_page(link: dict, uid: str, addresses: list[str]) -> str:
 @media(max-width:760px){{.container{{max-width:620px!important;padding:20px 12px 42px!important}}.sub-hero-head{{align-items:flex-start;flex-direction:column}}.sub-hero-grid{{grid-template-columns:1fr}}.sub-hero-grid .ring-card{{min-height:300px}}.sub-actions-card{{grid-template-columns:1fr!important}}.sub-actions-card .sub-action-grid{{display:grid!important;grid-template-columns:1fr 1fr!important}}.sub-action-btn,.sub-action-btn.primary{{min-width:0!important;width:100%!important}}.platform-chips{{grid-template-columns:repeat(2,1fr)!important}}.apps-grid{{grid-template-columns:repeat(2,1fr)!important}}}}
 @media(max-width:460px){{.sub-brandline .header-title{{font-size:22px!important}}.sub-actions-card .sub-action-grid{{grid-template-columns:1fr!important}}.overview-line{{align-items:flex-start;flex-direction:column;gap:4px}}.overview-line b{{text-align:left}}.hero-chip{{align-self:stretch;text-align:center}}}}
 
-/* ===== VANTA HUB BLACK & WHITE FINAL THEME ===== */
-:root{--bg:#000;--panel:#050505;--white:#fff;--gray:#aaa;--line:#2b2b2b;--shadow:none!important}
-html,body{background:#000!important;color:#fff!important}
-body *{color:#fff!important;border-color:#2b2b2b!important}
-body button,body .btn{background:#fff!important;color:#000!important;border:1px solid #fff!important}
-body button:hover,body .btn:hover{background:#000!important;color:#fff!important}
-.card,.panel,.box,.dashboard-card,.stat-card,.sidebar,.topbar,.hero{background:#050505!important;box-shadow:none!important}
-input,textarea,select{background:#000!important;color:#fff!important;border:1px solid #fff!important}
-.progress,.bar{background:#222!important}
-.progress *,.bar *{background:#fff!important}
-.logo,.brand{filter:grayscale(1) brightness(2)}
-/* remove old neon accents */
-[class*="purple"],[class*="violet"],[class*="green"],[style*="purple"],[style*="violet"]{color:#fff!important;background:#000!important}
+/* ===== VANTA NEW DASHBOARD DESIGN ===== */
+#page-dashboard{
+    background:transparent!important;
+}
+#page-dashboard .dash-hero{
+    border-radius:28px!important;
+    background:
+    radial-gradient(circle at top right,rgba(168,85,247,.18),transparent 35%),
+    linear-gradient(135deg,#09030f,#12051d)!important;
+    border:1px solid rgba(168,85,247,.28)!important;
+}
+#page-dashboard .dash-brand-center{
+    font-size:22px!important;
+    letter-spacing:8px!important;
+    text-shadow:0 0 25px rgba(168,85,247,.8);
+}
+#page-dashboard .dash-title{
+    font-size:38px!important;
+    letter-spacing:-1px;
+}
+#page-dashboard .dash-cards,
+#page-dashboard .stats-grid{
+    gap:18px!important;
+}
+#page-dashboard .stat-card,
+#page-dashboard .dash-panel{
+    border-radius:24px!important;
+    background:linear-gradient(145deg,rgba(18,8,32,.95),rgba(5,2,12,.98))!important;
+    border:1px solid rgba(168,85,247,.22)!important;
+    box-shadow:0 20px 50px rgba(0,0,0,.35)!important;
+}
+#page-dashboard .stat-card:hover,
+#page-dashboard .dash-panel:hover{
+    transform:translateY(-3px);
+    border-color:rgba(216,180,254,.5)!important;
+}
+#page-dashboard .dash-panel-title{
+    font-size:20px!important;
+}
+#page-dashboard .health-fill{
+    background:linear-gradient(90deg,#7c3aed,#e879f9)!important;
+}
+#page-dashboard .mem-fill{
+    background:linear-gradient(90deg,#9333ea,#c084fc)!important;
+}
+#page-dashboard .alerts-box{
+    border-radius:22px!important;
+}
+
+
+/* ===== VANTA FULL DASHBOARD REBUILD (NO FEATURES REMOVED) ===== */
+.dashboard,
+#dashboard,
+.dashboard-container {
+    position: relative;
+}
+
+.dashboard-hero {
+    min-height: 240px !important;
+    border-radius: 30px !important;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(168,85,247,.35), transparent 35%),
+      linear-gradient(135deg,#050008,#18052b) !important;
+    display:flex;
+    align-items:center;
+    padding:40px !important;
+}
+
+.dashboard-card,
+.stat-card,
+.card {
+    border-radius:26px !important;
+    background:linear-gradient(145deg,#10051d,#07020d) !important;
+    border:1px solid rgba(168,85,247,.25) !important;
+    transition:.3s ease !important;
+}
+
+.dashboard-card:hover,
+.stat-card:hover,
+.card:hover {
+    transform:translateY(-6px);
+    border-color:#c084fc !important;
+}
+
+.dashboard-grid {
+    display:grid !important;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px !important;
+}
+
+.dashboard-title {
+    font-size:42px !important;
+    font-weight:800 !important;
+}
+
+.dashboard-logo {
+    letter-spacing:10px;
+    font-size:28px;
+    text-shadow:0 0 25px #a855f7;
+}
+
+.progress-bar {
+    background:linear-gradient(90deg,#7c3aed,#d946ef)!important;
+}
+
+.dashboard-section {
+    border-radius:28px!important;
+    padding:25px!important;
+    background:#08030f!important;
+    border:1px solid rgba(168,85,247,.18)!important;
+}
 
 </style>
 </head>
@@ -4315,21 +4413,6 @@ body[dir="rtl"] .sidebar{left:auto!important;right:0!important}body[dir="rtl"] .
 .sub-eyebrow{color:#e9d5ff!important;font-size:10px!important;letter-spacing:3px!important}.sub-brandline .header-title{font-size:30px!important;color:#fff!important;background:none!important;-webkit-text-fill-color:#fff!important;letter-spacing:4px!important;text-shadow:0 0 18px rgba(192,132,252,.28)!important}.header-sub{color:rgba(255,255,255,.38)!important}
 #page-inbounds .m-cards{display:none!important;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px}
 @media(max-width:760px){#page-inbounds .m-cards{display:grid!important}.inbound-board .tbl-wrap{display:none!important}}
-
-/* ===== VANTA HUB BLACK & WHITE FINAL THEME ===== */
-:root{--bg:#000;--panel:#050505;--white:#fff;--gray:#aaa;--line:#2b2b2b;--shadow:none!important}
-html,body{background:#000!important;color:#fff!important}
-body *{color:#fff!important;border-color:#2b2b2b!important}
-body button,body .btn{background:#fff!important;color:#000!important;border:1px solid #fff!important}
-body button:hover,body .btn:hover{background:#000!important;color:#fff!important}
-.card,.panel,.box,.dashboard-card,.stat-card,.sidebar,.topbar,.hero{background:#050505!important;box-shadow:none!important}
-input,textarea,select{background:#000!important;color:#fff!important;border:1px solid #fff!important}
-.progress,.bar{background:#222!important}
-.progress *,.bar *{background:#fff!important}
-.logo,.brand{filter:grayscale(1) brightness(2)}
-/* remove old neon accents */
-[class*="purple"],[class*="violet"],[class*="green"],[style*="purple"],[style*="violet"]{color:#fff!important;background:#000!important}
-
 </style>
 </head>
 <body>
