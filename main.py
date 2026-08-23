@@ -2493,9 +2493,52 @@ def generate_landing_page(link: dict, uid: str, addresses: list[str]) -> str:
 .section-label{{margin-top:24px!important}}.platform-chips{{grid-template-columns:repeat(4,1fr)!important}}.apps-grid{{grid-template-columns:repeat(4,1fr)!important}}.configs-card{{border-radius:18px!important;margin-top:6px!important}}.footer-links{{border-top:1px solid rgba(168,85,247,.10);margin-top:18px;padding-top:18px}}
 @media(max-width:760px){{.container{{max-width:620px!important;padding:20px 12px 42px!important}}.sub-hero-head{{align-items:flex-start;flex-direction:column}}.sub-hero-grid{{grid-template-columns:1fr}}.sub-hero-grid .ring-card{{min-height:300px}}.sub-actions-card{{grid-template-columns:1fr!important}}.sub-actions-card .sub-action-grid{{display:grid!important;grid-template-columns:1fr 1fr!important}}.sub-action-btn,.sub-action-btn.primary{{min-width:0!important;width:100%!important}}.platform-chips{{grid-template-columns:repeat(2,1fr)!important}}.apps-grid{{grid-template-columns:repeat(2,1fr)!important}}}}
 @media(max-width:460px){{.sub-brandline .header-title{{font-size:22px!important}}.sub-actions-card .sub-action-grid{{grid-template-columns:1fr!important}}.overview-line{{align-items:flex-start;flex-direction:column;gap:4px}}.overview-line b{{text-align:left}}.hero-chip{{align-self:stretch;text-align:center}}}}
+
+/* VANTA HUB MONOCHROME REDESIGN */
+:root{
+  --vanta-black:#000;
+  --vanta-white:#fff;
+  --vanta-gray:#111;
+  --vanta-border:#333;
+}
+body{
+  background:#000 !important;
+  color:#fff !important;
+}
+*, *::before, *::after{
+  scrollbar-color:#fff #000;
+}
+.sidebar,.card,.panel,.modal,.dash-hero,.topbar{
+  background:#050505 !important;
+  border-color:#333 !important;
+  color:#fff !important;
+}
+button,.btn{
+  background:#fff !important;
+  color:#000 !important;
+  border:1px solid #fff !important;
+  box-shadow:none !important;
+}
+button:hover,.btn:hover{
+  background:#000 !important;
+  color:#fff !important;
+}
+input,textarea,select{
+  background:#000 !important;
+  color:#fff !important;
+  border:1px solid #fff !important;
+}
+.nav-label,.title,.dash-title,h1,h2,h3{
+  color:#fff !important;
+}
+.vanta-logo,.brand-logo{
+  filter:grayscale(1) contrast(2);
+}
+
 </style>
 </head>
 <body>
+<div class="vanta-logo" style="display:none">VANTA HUB</div>
 <div class="bg-glow"></div>
 <div class="grid-bg"></div>
 <div class="starfield" id="starfield"></div>
@@ -4300,6 +4343,48 @@ body[dir="rtl"] .sidebar{left:auto!important;right:0!important}body[dir="rtl"] .
 .sub-eyebrow{color:#e9d5ff!important;font-size:10px!important;letter-spacing:3px!important}.sub-brandline .header-title{font-size:30px!important;color:#fff!important;background:none!important;-webkit-text-fill-color:#fff!important;letter-spacing:4px!important;text-shadow:0 0 18px rgba(192,132,252,.28)!important}.header-sub{color:rgba(255,255,255,.38)!important}
 #page-inbounds .m-cards{display:none!important;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px}
 @media(max-width:760px){#page-inbounds .m-cards{display:grid!important}.inbound-board .tbl-wrap{display:none!important}}
+
+/* VANTA HUB MONOCHROME REDESIGN */
+:root{
+  --vanta-black:#000;
+  --vanta-white:#fff;
+  --vanta-gray:#111;
+  --vanta-border:#333;
+}
+body{
+  background:#000 !important;
+  color:#fff !important;
+}
+*, *::before, *::after{
+  scrollbar-color:#fff #000;
+}
+.sidebar,.card,.panel,.modal,.dash-hero,.topbar{
+  background:#050505 !important;
+  border-color:#333 !important;
+  color:#fff !important;
+}
+button,.btn{
+  background:#fff !important;
+  color:#000 !important;
+  border:1px solid #fff !important;
+  box-shadow:none !important;
+}
+button:hover,.btn:hover{
+  background:#000 !important;
+  color:#fff !important;
+}
+input,textarea,select{
+  background:#000 !important;
+  color:#fff !important;
+  border:1px solid #fff !important;
+}
+.nav-label,.title,.dash-title,h1,h2,h3{
+  color:#fff !important;
+}
+.vanta-logo,.brand-logo{
+  filter:grayscale(1) contrast(2);
+}
+
 </style>
 </head>
 <body>
